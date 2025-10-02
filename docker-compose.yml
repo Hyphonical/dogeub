@@ -1,0 +1,13 @@
+services:
+  dogeub:
+    # 🖼️ Image published by GitHub Actions
+    image: ghcr.io/hyphonical/dogeub:latest
+    # 🐳 Container name
+    container_name: DogeUB
+    restart: unless-stopped
+    # 🔌 Expose port
+    ports:
+      - "8080:8080"
+    # 🔑 Pass runtime configuration from your .env file if needed
+    env_file:
+      - .env
